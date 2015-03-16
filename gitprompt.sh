@@ -30,7 +30,9 @@ function git_prompt_config()
   # Bold
   local BoldGreen="\[\033[1;32m\]"    # Green
   local BoldBlue="\[\033[1;34m\]"     # Blue
-
+  local BoldYellow="\[\033[1;33m\]"
+  local BoldRed="\[\033[1;31m\]"
+  
   # High Intensty
   local IntenseBlack="\[\033[0;90m\]" # Grey
 
@@ -42,18 +44,19 @@ function git_prompt_config()
   local White='\[\033[37m\]'
   local Red="\[\033[0;31m\]"
   local Blue="\[\033[0;34m\]"
+  local Green="\[\033[0;32m\]"
 
   # Default values for the appearance of the prompt. Configure at will.
   GIT_PROMPT_PREFIX="["
   GIT_PROMPT_SUFFIX="]"
   GIT_PROMPT_SEPARATOR="|"
-  GIT_PROMPT_BRANCH="${Magenta}"
-  GIT_PROMPT_STAGED="${Red}● "
-  GIT_PROMPT_CONFLICTS="${Red}✖ "
-  GIT_PROMPT_CHANGED="${Blue}✚ "
-  GIT_PROMPT_REMOTE=" "
-  GIT_PROMPT_UNTRACKED="…"
-  GIT_PROMPT_CLEAN="${BoldGreen}✔"
+  GIT_PROMPT_BRANCH="${Yellow}"
+  GIT_PROMPT_STAGED="${Green}✱"
+  GIT_PROMPT_CONFLICTS="${BoldRed}✖"
+  GIT_PROMPT_CHANGED="${Red}✚"
+  GIT_PROMPT_REMOTE=""
+  GIT_PROMPT_UNTRACKED="${IntenseBlack}…"
+  GIT_PROMPT_CLEAN="${Green}✔"
 
   # Various variables you might want for your PS1 prompt instead
   local Time12a="\$(date +%H:%M)"
